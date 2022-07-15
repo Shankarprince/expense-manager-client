@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { SettingDisplay } from "./SettingDisplay.js";
+import Form from "../components/form/form";
 
 export function Settings() {
   const [setting, setSetting] = useState([]);
@@ -28,6 +29,17 @@ export function Settings() {
 
   useEffect(getSetting, []);
 
+  const settingsData = [
+    { type: "input", label: "Opening Balance", inputType: "text" },
+    { type: "input", label: "Company Name", inputType: "text" },
+    { type: "input", label: "Address", inputType: "text" },
+    { type: "input", label: "City", inputType: "text" },
+    { type: "input", label: "Country", inputType: "text" },
+    { type: "input", label: "Telephone", inputType: "number" },
+    { type: "input", label: "Currency", inputType: "text" },
+    { type: "submit", label: "Edit", inputType: "submit" },
+  ]
+
   return (
     <div>
       {setting.map(
@@ -41,6 +53,7 @@ export function Settings() {
           country={sett.country}
           telephone={sett.telephone}
           currency={sett.currency} />))}
+      {/* <Form data={settingsData} /> */}
     </div>
   );
 }

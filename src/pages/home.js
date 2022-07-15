@@ -1,24 +1,12 @@
-import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import Nav from "../components/nav/nav";
 
 export function Home() {
 
-  const history = useHistory();
+  const navItems = ["Settings", "Contact"];
 
-  const logout = () => {
-    localStorage.setItem("x-auth-token", "");
-    history.push("/user/login")
-  }
   return (
     <div>
-      <header className="header">
-        <p>Petty Cash Manager</p>
-        <div className="div-header">
-          <Link to="/settings"><p>Settings</p></Link>
-          <Link to="/contact"><p>Contact</p></Link>
-          <p onClick={() => logout()}>Logout</p>
-        </div>
-      </header>
+      <Nav items={navItems} />
       <div className="home-container">
         <div className="home-inner-container">
           <div>
@@ -45,16 +33,6 @@ export function Home() {
               Cash Manager provides a solution for all business accounting
               needs.
             </p>
-          </div>
-        </div>
-        <div className="home-bills-container">
-          <div>
-            <Link to="/bills/add">
-              <h2>Add New Bill</h2>
-            </Link>
-            <Link to="/bills">
-              <h2>Bills</h2>
-            </Link>
           </div>
         </div>
       </div>
