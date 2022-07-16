@@ -8,6 +8,12 @@
   height: 8vh;
 }
 
+.headerName {
+  display: flex;
+  align-items: center;
+  
+}
+
 .headerItems {
   display: flex;
   flex-direction: row;

@@ -12,7 +12,7 @@ export default function Nav(props) {
 
     return (
         <header className={styles.header}>
-            <p>Petty Cash Manager</p>
+            <h3 className={styles.headerName}>Petty Cash Manager</h3>
             <div className={styles.headerItems}>
                 {items.map((i, index) => <Link key={index} className={styles.headerLinks} to={`/${i}`}><p>{i}</p></Link>)}
                 <Link className={styles.headerLinks} onClick={() => logout()} to="/"><p>Logout</p></Link>
