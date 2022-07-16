@@ -1,8 +1,9 @@
-import Nav from "../components/nav/nav";
+import Nav from "../../components/nav/nav";
+import "./home.css";
 
 export function Home() {
 
-  const navItems = ["Settings", "Contact"];
+  const navItems = ["Bills", "Settings", "Contact"];
 
   return (
     <div>
@@ -12,7 +13,7 @@ export function Home() {
           <div>
             <img
               className="developer"
-              src={require("../images/developer.jpg")}
+              src={require("../../images/developer.jpg")}
               alt="developer"
             />
           </div>

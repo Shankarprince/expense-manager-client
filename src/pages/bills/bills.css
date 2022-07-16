@@ -1,0 +1,69 @@
+.addbill-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 92vh;
+}
+
+
+.body-container {
+    background-color: lightgray;
+    height: 100vh;
+
+}
+
+.history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    height: 92vh;
+}
+
+.display-container {
+    justify-content: center;
+    margin-top: 40px;
+    width: 90%;
+}
+
+th, td {
+    width: 150px;
+    text-align: center;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+}
+
+th {
+    background-color: skyblue;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.modify {
+    width: 75px;
+}
+
+.modify a {
+    text-decoration: none;
+}
+
+
+.bill-header {
+    text-align: center;
+}
+
+.bill-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
+    height: 100vh;
+}

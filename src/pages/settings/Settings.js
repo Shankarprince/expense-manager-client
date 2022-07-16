@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { SettingDisplay } from "./SettingDisplay.js";
-import Form from "../components/form/form";
+import Form from "../../components/form/form";
+import Nav from "../../components/nav/nav.js";
+import "./settings.css";
 
 export function Settings() {
   const [setting, setSetting] = useState([]);
@@ -40,20 +42,17 @@ export function Settings() {
     { type: "submit", label: "Edit", inputType: "submit" },
   ]
 
+  const navItems = ["Home", "Bills", "Contact"];
+
   return (
     <div>
-      {setting.map(
-        (sett) => (<SettingDisplay
-          key={sett._id}
-          id={sett._id}
-          opBal={sett.opBal}
-          cname={sett.cname}
-          address={sett.address}
-          city={sett.city}
-          country={sett.country}
-          telephone={sett.telephone}
-          currency={sett.currency} />))}
-      {/* <Form data={settingsData} /> */}
+      <Nav items={navItems} />
+      <div className="settings-container">
+        <h3 className="settings-header">Account Settings</h3>
+        <div className="form-container">
+          <Form data={settingsData} />
+        </div>
+      </div>
     </div>
   );
 }

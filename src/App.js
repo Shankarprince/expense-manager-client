@@ -1,15 +1,15 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import { Signup } from './user/Signup.js';
-import { Login } from './user/Login.js';
-import { Home } from './pages/home';
-import { Settings } from './settings/Settings';
-import { Contact } from './misc/Contact';
-import { Logout } from './misc/Logout';
-import { EditSettings } from './settings/EditSettings';
-import { Bills } from './bills/bills';
-import { AddBill } from './bills/AddBill';
-import { EditBill } from './bills/EditBill';
+import { Signup } from './pages/signup/Signup.js';
+import { Login } from './pages/login/Login';
+import { Home } from './pages/home/home';
+import { Settings } from './pages/settings/Settings';
+import { Contact } from './pages/contact/Contact';
+import { Logout } from './components/auth/Logout';
+import { EditSettings } from './pages/settings/EditSettings';
+import { Bills } from './pages/bills/bills';
+import { AddBill } from './pages/bills/AddBill';
+import { EditBill } from './pages/bills/EditBill';
 import { RequireAuth } from "./components/auth/auth";
 
 function App() {
@@ -19,8 +19,7 @@ function App() {
       <Switch>
         <Route path="/login"><Login /></Route>
         <Route path="/signup"><Signup /></Route>
-        <RequireAuth>
-          <Route path="/"><Home /></Route>
+        {/* <RequireAuth> */}
           <Route path="/contact"><Contact /></Route>
           <Route path="/logout"><Logout /></Route>
           <Route exact path="/settings"><Settings /></Route>
@@ -28,7 +27,8 @@ function App() {
           <Route exact path="/bills"><Bills /></Route>
           <Route path="/bills/add"><AddBill /></Route>
           <Route path="/bills/:id"><EditBill /></Route>
-        </RequireAuth>
+          <Route path="/"><Home /></Route>
+        {/* </RequireAuth> */}
       </Switch>
     </div>
   );

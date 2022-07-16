@@ -1,0 +1,13 @@
+.settings-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  height: 92vh;
+}
+
+.settings-header {
+  text-align: center;
+}
+

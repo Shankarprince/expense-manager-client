@@ -15,7 +15,8 @@ export function Login() {
       password: password
     }
 
-    fetch("https://petty-cash-manager-server.herokuapp.com/user/login", {
+    // fetch("https://petty-cash-manager-server.herokuapp.com/user/login", {
+    fetch("http://localhost:5000/user/login", {
       method: "POST",
       body: JSON.stringify(loginData),
       headers: {
